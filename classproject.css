@@ -1,1 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Allerta);
+@import url(https://fonts.googleapis.com/css?family=Lobster+Two);
 
+* {
+  margin:0;
+  padding:0;
+  border:0;
+  box-sizing: border-box;
+}
+/* header styling*/
+header {
+  background-color: #ddd;
+  font-family:'Allerta', sans-serif;
+  position:fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+  padding:0px 5px 10px 5px;
+}
+
+.innerheaderwrapper {
+  margin:0 auto;
+  width:95%;
+}
+/*header title*/
+.headertitle {
+  width:40%;
+  float:left;
+}
+
+.headertitle p {
+  font-size: 12px;
+}
+
+.headertitle span {
+  font-family: 'Lobster Two', cursive;
+  font-size:28px;
+}
+
+/*header menu*/
+
+.headermenu {
+  float:right;
+  width:50%;
+}
+
+.innerheadermenu {
+  margin:auto;
+  width:70%;
+}
+.headermenu ul {
+  list-style-type: none;
+}
+
+.headermenu ul li {
+  display: inline-block;
+  padding-top:20px;
+  padding-left:40px;
+}
+
+.headermenu ul li a span {
+  font-weight: bold;
+}
+
+.headermenu ul li a:link {
+  text-decoration: none;
+  color:inherit;
+}
+
+.headermenu ul li a:link, a:visited {
+  color:inherit;
+}
+.headermenu ul li a:hover {
+  color:#aaa;
+}
+
+.maincontainer {
+  clear:both;
+}
