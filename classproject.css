@@ -12,12 +12,11 @@ header {
   background-color: #ddd;
   font-family:'Allerta', sans-serif;
   position:fixed;
-  top:0px;
-  left:0px;
-  right:0px;
-  padding:0px 5px 10px 5px;
+  top:0;
+  left:0;
+  right:0;
+  padding:0em 1em 1.25em 1em;
 }
-
 .innerheaderwrapper {
   margin:0 auto;
   width:95%;
@@ -26,36 +25,44 @@ header {
 .headertitle {
   width:40%;
   float:left;
+  padding-top:1em;
+}
+
+.headertitle h1 {
+  font-size:1.80em;
+  width:100%;
 }
 
 .headertitle p {
-  font-size: 12px;
+  font-size: .80em;
+  width:100%;
 }
 
 .headertitle span {
   font-family: 'Lobster Two', cursive;
-  font-size:28px;
+  font-size:.80em;
 }
 
 /*header menu*/
 
 .headermenu {
   float:right;
-  width:50%;
+  width:55%;
 }
 
 .innerheadermenu {
-  margin:auto;
-  width:70%;
+  margin-left:auto;
+  width:75%;
 }
 .headermenu ul {
   list-style-type: none;
 }
 
 .headermenu ul li {
-  display: inline-block;
-  padding-top:20px;
-  padding-left:40px;
+float:left;
+padding-top:1em;
+padding-left:1em;
+width:25%
 }
 
 .headermenu ul li a span {
@@ -73,7 +80,19 @@ header {
 .headermenu ul li a:hover {
   color:#aaa;
 }
+/*main content*/
 
 .maincontainer {
-  clear:both;
+  padding-top:5em;
+}
+/*picture section*/
+
+.photogallarysection {
+  width:100%;
+}
+
+.mainpic1 {
+  float:left;
+  width:100%;
+  height:30em;
 }
