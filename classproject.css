@@ -6,6 +6,7 @@
   padding:0;
   border:0;
   box-sizing: border-box;
+  font-family:'Allerta', sans-serif;
 }
 /* header styling*/
 header {
@@ -95,14 +96,138 @@ width:25%
   width:100%;
 }
 
+/*about section*/
+
  /*background image isnt working. matches line 37-41 on HTML. I highlight the section I want to add a background color too in pink temporarly. The path to background picture on my local machine is C:\Users\Andy H\Desktop\betamore\classwork\andyharn.github.io\assets\background1.png*/
 .aboutsection {
   font-family:'Allerta', sans-serif;
-  padding: 1em;
   width:100%;
   background-image: url (C:\Users\Andy H\Desktop\betamore\classwork\andyharn.github.io\assets\background1.png);
-  background-color: pink;
+  background-color:#FFFFC2;
+  overflow:hidden;
 }
-.aboutsectionwrapper {
 
+.aboutsectionwrapper {
+  margin:auto;
+}
+
+.aboutsectionwrapper h2 {
+  width:100%;
+  margin:1em;
+}
+
+.aboutsectioninnerwrapper1 {
+  float:left;
+  width:50%;
+}
+
+.aboutsectioninnerwrapper1 .owners {
+  display:block;
+  width:60%;
+  margin:auto;
+}
+.aboutsectioninnerwrapper1 p {
+  width:80%;
+  margin:0 auto;
+}
+
+.aboutsectioninnerwrapper2 {
+  float:left;
+  width:50%
+}
+
+.aboutsectioninnerwrapper2 .catplayground {
+  display:block;
+  width:60%;
+  margin:auto;
+}
+
+.aboutsectioninnerwrapper2 p {
+  width:80%;
+  margin:auto;
+}
+
+.aboutsectioninnerwrapper2 span {
+  font-style:italic;
+}
+
+/*menu section*/
+
+.menusection, privatepartiessection, contactsection {
+  clear:both;
+}
+
+.menusection {
+  font-family:'Allerta', sans-serif;
+  width:100%;
+  background-image: url (C:\Users\Andy H\Desktop\betamore\classwork\andyharn.github.io\assets\background1.png);
+  background-color:#DBFFDB;
+  overflow:hidden;
+}
+
+.menusection h2 {
+  width:100%;
+  margin:1em;
+}
+
+.menusection h4 {
+  display:block;
+  margin:auto;
+}
+
+.humanmenu {
+  width:100%;
+  float:left;
+  overflow:hidden;
+}
+
+.humanmenuitem {
+  float:left;
+  width:20%;
+  border: black 1px solid;
+  margin:1em;
+  background-color: white;
+  }
+
+.humanmenuitem img {
+  display:block;
+  margin:auto;
+  width:8em;
+  height:8em;
+}
+
+.catmenu {
+  clear:both;
+  width:100%;
+  overflow:hidden;
+}
+.catmenuitem {
+  float:left;
+  width:20%;
+  border: black 1px solid;
+  margin:1em;
+  background-color: white;
+  }
+
+.catmenuitem img {
+  display:block;
+  margin:auto;
+  width:8em;
+  height:8em;
+}
+/*footer*/
+.contactsection {
+  background-color: #ddd;
+  font-family:'Allerta', sans-serif;
+  overflow: hidden;
+}
+.contactsection h2 {
+  width:100%;
+  margin:1em;
+}
+
+.address, .phone, .hours {
+  float:left;
+  width: 33%;
+  list-style-type: none;
 }
