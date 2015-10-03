@@ -67,6 +67,10 @@ width:25%
 
 .headermenu ul li a span {
   font-weight: bold;
+  font-family: 'Lobster Two', cursive;
+  font-weight: bold;
+  font-style: italic;
+  margin:.25em;
 }
 
 .headermenu ul li a:link {
@@ -150,6 +154,7 @@ width:25%
 
 .aboutsectioninnerwrapper2 span {
   font-style:italic;
+  font-family: 'Lobster Two', cursive;
 }
 
 /*menu section*/
@@ -227,6 +232,14 @@ width:25%
 .privatepartiessection h2 {
   width:100%;
   margin:1em;
+}
+
+.privatepartiessection span {
+  font-family: 'Lobster Two', cursive;
+  font-weight: bold;
+  font-style: italic;
+  margin:.25em;
+
 }
 /*footer*/
 
