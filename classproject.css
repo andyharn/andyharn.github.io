@@ -103,9 +103,10 @@ width:25%
   font-family:'Allerta', sans-serif;
   width:100%;
   background-image: url (C:\Users\Andy H\Desktop\betamore\classwork\andyharn.github.io\assets\background1.png);
-  background-color:#FFFFC2;
+  background-color:#white;
   overflow:hidden;
 }
+/*#DBFFDB #FFFFC2*/
 
 .aboutsectionwrapper {
   margin:auto;
@@ -161,7 +162,7 @@ width:25%
   font-family:'Allerta', sans-serif;
   width:100%;
   background-image: url (C:\Users\Andy H\Desktop\betamore\classwork\andyharn.github.io\assets\background1.png);
-  background-color:#DBFFDB;
+  background-color:#ddd;
   overflow:hidden;
 }
 
@@ -184,7 +185,6 @@ width:25%
 .humanmenuitem {
   float:left;
   width:20%;
-  border: black 1px solid;
   margin:1em;
   background-color: white;
   }
@@ -204,7 +204,6 @@ width:25%
 .catmenuitem {
   float:left;
   width:20%;
-  border: black 1px solid;
   margin:1em;
   background-color: white;
   }
