@@ -8,25 +8,32 @@
   box-sizing: border-box;
   font-family:'Allerta', sans-serif;
 }
-/* header styling*/
+
+/* header section*/
+
+  /*headerstyling*/
+
 header {
-  background-color: #ddd;
+  background-color: #C7C7C7;
   font-family:'Allerta', sans-serif;
   position:fixed;
   top:0;
   left:0;
   right:0;
-  padding:0em 1em 1.25em 1em;
+  padding:0em 1em 3em 1em;
 }
+
 .innerheaderwrapper {
   margin:0 auto;
   width:95%;
 }
-/*header title*/
+
+  /*header title*/
+
 .headertitle {
   width:40%;
   float:left;
-  padding-top:1em;
+  padding-top:2em;
 }
 
 .headertitle h1 {
@@ -44,7 +51,7 @@ header {
   font-size:.80em;
 }
 
-/*header menu*/
+  /*header menu*/
 
 .headermenu {
   float:right;
@@ -60,8 +67,8 @@ header {
 
 .headermenu ul li {
 float:left;
-padding-top:1em;
-padding-left:1em;
+padding-top:3.2em;
+padding-left:3em;
 width:25%
 }
 
@@ -84,11 +91,13 @@ width:25%
 .headermenu ul li a:hover {
   color:#aaa;
 }
-/*main content*/
+
+/*main content to clear the fixed header*/
 
 .maincontainer {
   padding-top:5em;
 }
+
 /*picture section*/
 
 .photogallarysection {
@@ -102,7 +111,6 @@ width:25%
 
 /*about section*/
 
- /*background image isnt working. matches line 37-41 on HTML. I highlight the section I want to add a background color too in pink temporarly. The path to background picture on my local machine is C:\Users\Andy H\Desktop\betamore\classwork\andyharn.github.io\assets\background1.png*/
 .aboutsection {
   font-family:'Allerta', sans-serif;
   width:100%;
@@ -110,7 +118,6 @@ width:25%
   background-color:#white;
   overflow:hidden;
 }
-/*#DBFFDB #FFFFC2*/
 
 .aboutsectionwrapper {
   margin:auto;
@@ -129,11 +136,12 @@ width:25%
 .aboutsectioninnerwrapper1 .owners {
   display:block;
   width:60%;
-  margin:auto;
+  margin:.5em auto .5em auto;
 }
+
 .aboutsectioninnerwrapper1 p {
   width:80%;
-  margin:0 auto;
+  margin:auto;
 }
 
 .aboutsectioninnerwrapper2 {
@@ -144,7 +152,7 @@ width:25%
 .aboutsectioninnerwrapper2 .catplayground {
   display:block;
   width:60%;
-  margin:auto;
+  margin:.5em auto .5em auto;
 }
 
 .aboutsectioninnerwrapper2 p {
@@ -221,6 +229,7 @@ width:25%
 }
 
 /*private parties section*/
+
 .privatepartiessection {
   font-family:'Allerta', sans-serif;
   width:100%;
@@ -239,9 +248,26 @@ width:25%
   font-weight: bold;
   font-style: italic;
   margin:.25em;
-
 }
-/*footer*/
+
+.privateplist {
+  margin:2em;
+  width:30%;
+  display:block;
+}
+
+.ppcontainer {
+  width:95%;
+  margin:auto;
+}
+.partypic {
+  display:inline-block;
+  width:24.5%;
+  height: 95%;
+  margin:0 auto .5em auto;
+}
+
+/*contact section*/
 
 .contactsection {
   background-color: #ddd;
@@ -253,8 +279,27 @@ width:25%
   margin:1em;
 }
 
-.address, .phone, .hours {
+.contactcontainer {
+  margin:auto;
+  width:100%;
+}
+
+.contactcontainer .info {
+  margin: 0 auto;
   float:left;
   width: 33%;
+}
+
+.contactcontainer .info ul{
   list-style-type: none;
+}
+
+.contactinfo {
+  margin:auto;
+  width:95%;
+  text-align: center;
+}
+
+.contactinfo h3{
+  text-decoration: underline;
 }
