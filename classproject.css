@@ -136,7 +136,7 @@ width:25%
 .aboutsectioninnerwrapper1 .owners {
   display:block;
   width:60%;
-  margin:.5em auto .5em auto;
+  margin:1em auto 3em auto;
 }
 
 .aboutsectioninnerwrapper1 p {
@@ -152,7 +152,7 @@ width:25%
 .aboutsectioninnerwrapper2 .catplayground {
   display:block;
   width:60%;
-  margin:.5em auto .5em auto;
+  margin:1em auto .5em auto;
 }
 
 .aboutsectioninnerwrapper2 p {
@@ -188,42 +188,72 @@ width:25%
   margin:auto;
 }
 
-.humanmenu {
-  width:90%;
-  /*display:inline-block;*/
-  overflow:hidden;
-  margin:auto;
+.humanmenugrid {
+  background-image: url(assets/background1.png);
+  margin:0em auto 1em auto;
+  padding:1em 0em 1em 1em;
+  width:80%;
 }
 
-.humanmenuitem {
+.humanmenugrid::after {
+  display:table;
+  clear:both;
+  content:"";
+}
+
+.humancol-1-4 {
   float:left;
-  width:20%;
-  margin:1.2em;
-  background-color: white;
+  width:25%;
+  text-align: center;
   }
 
-.humanmenuitem img {
+.humancol-1-4 p {
+  text-align: center;
+  }
+
+.humancol-1-4:last-of-type {
+  padding-right: 1em;
+}
+
+.humanmodule {
+  padding: 1em;
+}
+
+.humanmodule img {
   display:block;
   margin:auto;
   width:8em;
   height:8em;
 }
 
-.catmenu {
-  width:90%;
-  /*display:inline-block;*/
-  overflow:hidden;
-  margin:auto;
+.catmenugrid {
+  background-image: url(assets/background1.png);
+  margin:0em auto 3em auto;
+  padding:1em 0em 1em 1em;
+  width:80%;
 }
 
-.catmenuitem {
-  float:left;
-  width:20%;
-  margin:1.2em;
-  background-color: white;
+.catmenugrid::after {
+  display:table;
+  content:"";
+  clear:both;
   }
 
-.catmenuitem img {
+.catcol-1-4 {
+  float:left;
+  width:25%;
+  text-align: center;
+  }
+
+.catcol-1-4:last-of-type {
+  padding-right:1em;
+  }
+
+.catmodule {
+  padding:1em;
+  }
+
+.catcol-1-4 img {
   display:block;
   margin:auto;
   width:8em;
@@ -236,8 +266,6 @@ width:25%
   font-family:'Allerta', sans-serif;
   width:100%;
   background-image: url(assets/background1.png);
-  background-color:#white;
-  overflow:hidden;
 }
 
 .privatepartiessection h2 {
@@ -263,16 +291,33 @@ width:25%
   display:block;
 }
 
-.ppcontainer {
+.ppgrid {
   width:95%;
-  margin:auto;
+  margin:0 auto 0em auto;
+  padding:1em 0em 1em 1em;
+  background-image: url(assets/background1.png);
 }
 
-.partypic {
-  display:inline-block;
-  width:19.5%;
-  height: 95%;
-  margin:0 auto .5em auto;
+.ppgrid:after {
+  clear:both;
+  display:table;
+  content:"";
+  }
+
+.partypic-1-5 {
+  float: left;
+  width:20%;
+}
+
+.ppmodule {
+  padding:1em;
+}
+
+.ppmodule img {
+  display:block;
+  margin:auto;
+  width:12em;
+  height:10em;
 }
 
 /*contact section*/
@@ -310,4 +355,87 @@ width:25%
 
 .contactinfo h3{
   text-decoration: underline;
+}
+
+
+
+/* Grid Practice*
+
+.gridcontainer {
+  moz-box-sizing: border-box;
+  webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  color:white;
+}
+body {
+  background-color: black;
+  width:98%;
+  margin:auto;
+}
+
+.grid {
+  background-color:white;
+  margin:0em 0em 1em 0em;
+}
+
+.grid::after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+[class*='col-']{
+  float:left;
+  padding-right:1em;
+}
+
+.grid [class*='col-']:last-of-type {
+  padding-right: 1em
+}
+
+.col-2-3 {
+  width:66.66%;
+}
+
+.col-1-3 {
+  width:33.33%;
+}
+
+.col-1-6{
+  width:16.66%;
+}
+
+.col-1-2 {
+  width:50%;
+}
+
+.col-1-4 {
+  width:25%;
+}
+
+.module {
+  padding:1em;
+  background:#eee;
+}
+
+.gridpad {
+  padding-top:1em;
+  padding-right:0em;
+  padding-bottom:1em;
+  padding-left:1em;
+  background-color: white;
+  margin:0em 0em 1em 0em;
+}
+
+.gridpad [class*='col-']:last-of-type {
+  padding-right: 1em;
+}
+
+.gridpad::after {
+  content:"";
+  display:table;
+  clear:both;
 }
