@@ -114,7 +114,7 @@ width:25%
 
 /*about section*/
 
-.aboutsection {
+#aboutsection {
   font-family:'Allerta', sans-serif;
   width:100%;
   background-image: url(assets/background1.png);
@@ -170,23 +170,23 @@ width:25%
 
 /*menu section*/
 
-.menusection, privatepartiessection, contactsection {
+#menusection, privatepartiessection, contactsection {
   clear:both;
 }
 
-.menusection {
+#menusection {
   font-family:'Allerta', sans-serif;
   width:100%;
   background-color:#ddd;
   overflow:hidden;
 }
 
-.menusection h2 {
+#menusection h2 {
   width:100%;
   padding-left:1em;
 }
 
-.menusection h4 {
+#menusection h4 {
   display:block;
   margin:auto;
 }
@@ -207,16 +207,13 @@ width:25%
 .humancol-1-4 {
   float:left;
   width:25%;
+  padding-right:1em;
   text-align: center;
   }
 
 .humancol-1-4 p {
   text-align: center;
   }
-
-.humancol-1-4:last-of-type {
-  padding-right: 1em;
-}
 
 .humanmodule {
   padding: 1em;
@@ -245,11 +242,8 @@ width:25%
 .catcol-1-4 {
   float:left;
   width:25%;
-  text-align: center;
-  }
-
-.catcol-1-4:last-of-type {
   padding-right:1em;
+  text-align: center;
   }
 
 .catmodule {
@@ -265,23 +259,23 @@ width:25%
 
 /*private parties section*/
 
-.privatepartiessection {
+#privatepartiessection {
   font-family:'Allerta', sans-serif;
   width:100%;
   background-image: url(assets/background1.png);
 }
 
-.privatepartiessection h2 {
+#privatepartiessection h2 {
   width:100%;
   padding-left:1em;
 }
 
-.privatepartiessection p {
+#privatepartiessection p {
   width:98%;
   margin:0 auto
 }
 
-.privatepartiessection span {
+#privatepartiessection span {
   font-family: 'Lobster Two', cursive;
   font-weight: bold;
   font-style: italic;
@@ -309,11 +303,8 @@ width:25%
 
 .partypic-1-5 {
   float: left;
+  padding-right:.5em;
   width:20%;
-}
-
-.partypic-1-5:last-of-type {
-padding-right: .5em;
 }
 
 .ppmodule {
@@ -329,12 +320,12 @@ padding-right: .5em;
 
 /*contact section*/
 
-.contactsection {
+#contactsection {
   background-color: #ddd;
   font-family:'Allerta', sans-serif;
   overflow: hidden;
 }
-.contactsection h2 {
+#contactsection h2 {
   width:100%;
   margin:1em;
 }
