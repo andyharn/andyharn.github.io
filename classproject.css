@@ -14,13 +14,14 @@
   /*headerstyling*/
 
 header {
-  background-color: #C7C7C7;
+  background-color: #955A47;
   font-family:'Allerta', sans-serif;
   position:fixed;
   top:0;
   left:0;
   right:0;
   padding:0em 1em 3em 1em;
+  color:white;
 }
 
 .innerheaderwrapper {
@@ -99,7 +100,7 @@ width:25%
 .maincontainer {
   padding-top:5em;
   width: 100%;
-  background-image: url(assets/background1.png);
+  background-color:#F0F0EF;
 }
 
 /*picture section*/
@@ -126,7 +127,7 @@ width:25%
   margin:1em auto 0em auto;
   padding:1em 0em 1em 1em;
   width:90%;
-  background-color: #1e77e2;
+  background-color: #B1BD5D;
   color:white;
 }
 
@@ -182,7 +183,7 @@ width:25%
   margin:1em auto 0em auto;
   padding:1em 0em 1em 1em;
   width:90%;
-  background-color: #1e77e2;
+  background-color: #B1BD5D;
   color:white;
 }
 
@@ -235,7 +236,7 @@ width:25%
   margin:1em auto 0em auto;
   padding:1em 0em 1em 1em;
   width:90%;
-  background-color: #1e77e2;
+  background-color: #B1BD5D;
   color:white;
 }
 
@@ -259,7 +260,7 @@ width:25%
 /*human menu*/
 .humanmenugrid {
   background-image: url(assets/background1.png);
-  margin:0em auto 1em auto;
+  margin:1em auto 1em auto;
   padding:1em 0em 1em 1em;
   width:80%;
 }
@@ -335,7 +336,7 @@ width:25%
   margin:1em auto 0em auto;
   padding:1em 0em 1em 1em;
   width:90%;
-  background-color: #1e77e2;
+  background-color: #B1BD5D;
   color:white;
 }
 
@@ -388,16 +389,18 @@ width:25%
 .ppmodule img {
   display:block;
   margin:auto;
-  width:13em;
+  width:100%;
   height:10em;
 }
 
 /*contact section*/
 
 #contactsection {
-  background-color: #ddd;
+  background-color: #EDD690;
   font-family:'Allerta', sans-serif;
   overflow: hidden;
+  margin-top:1em;
+  color:white;
 }
 #contactsection h2 {
   width:100%;
