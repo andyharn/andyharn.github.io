@@ -99,6 +99,7 @@ width:25%
 .maincontainer {
   padding-top:5em;
   width: 100%;
+  background-image: url(assets/background1.png);
 }
 
 /*picture section*/
@@ -112,60 +113,116 @@ width:25%
   width:100%;
 }
 
+/*welcome section*/
+
+#welcomesection {
+  font-family:'Allerta', sans-serif;
+  width:100%;
+  overflow:hidden;
+  box-sizing: border-box;
+}
+
+.welcomesectiongrid {
+  margin:1em auto 0em auto;
+  padding:1em 0em 1em 1em;
+  width:90%;
+  background-color: #1e77e2;
+  color:white;
+}
+
+.welcomesectiongrid::after {
+  display:table;
+  clear:both;
+  content:"";
+}
+
+.welcomecol-1-4 {
+  float:left;
+  width:44%;
+  padding-right:1em;
+  text-align: center;
+}
+
+.welcomecol-3-4 {
+  float:left;
+  width:56%;
+  padding-right:1em;
+  text-align: center;
+}
+
+.catplayground {
+  width:100%;
+  max-height: 30em;
+}
+
+.welcomesectiongrid span {
+  font-style:italic;
+  font-family: 'Lobster Two', cursive;
+}
+
+.welcomecol-1-4 h2 {
+  font-weight: bolder;
+  font-size:2.5em;
+}
+
+.welcomecol-1-4 p {
+  padding-top:2em;
+}
+
 /*about section*/
 
 #aboutsection {
   font-family:'Allerta', sans-serif;
   width:100%;
-  background-image: url(assets/background1.png);
-  background-color:#white;
   overflow:hidden;
+  box-sizing: border-box;
 }
 
-.aboutsectionwrapper {
-  margin:auto;
+.aboutsectiongrid {
+  margin:1em auto 0em auto;
+  padding:1em 0em 1em 1em;
+  width:90%;
+  background-color: #1e77e2;
+  color:white;
 }
 
-.aboutsectionwrapper h2 {
-  width:100%;
-  padding-left:1em;
+.aboutsectiongrid::after {
+  display:table;
+  clear:both;
+  content:"";
 }
 
-.aboutsectioninnerwrapper1 {
+.aboutcol-1-4 {
   float:left;
-  width:50%;
+  width:35%;
+  padding-right:1em;
+  text-align: center;
 }
 
-.aboutsectioninnerwrapper1 .owners {
-  display:block;
-  width:60%;
-  margin:1em auto 3em auto;
+.owners {
+  display: block;
+  width: 100%;
 }
 
-.aboutsectioninnerwrapper1 p {
-  width:80%;
-  margin:auto;
-}
-
-.aboutsectioninnerwrapper2 {
+.aboutcol-3-4 {
   float:left;
-  width:50%
+  width:65%;
+  padding-right:1em;
+  text-align: center;
 }
 
-.aboutsectioninnerwrapper2 .catplayground {
-  display:block;
-  width:60%;
-  margin:1em auto .5em auto;
-}
-
-.aboutsectioninnerwrapper2 p {
-  width:80%;
-  margin:auto;
-}
-
-.aboutsectioninnerwrapper2 span {
+.aboutsectiongrid span {
   font-style:italic;
   font-family: 'Lobster Two', cursive;
+}
+
+.aboutcol-3-4 h2 {
+  font-weight: bolder;
+  font-size:2.5em;
+}
+
+.aboutcol-3-4 p {
+  padding-top: 1em;
 }
 
 /*menu section*/
@@ -175,22 +232,31 @@ width:25%
 }
 
 #menusection {
-  font-family:'Allerta', sans-serif;
-  width:100%;
-  background-color:#ddd;
-  overflow:hidden;
+  margin:1em auto 0em auto;
+  padding:1em 0em 1em 1em;
+  width:90%;
+  background-color: #1e77e2;
+  color:white;
 }
 
 #menusection h2 {
-  width:100%;
-  padding-left:1em;
+  font-weight: bolder;
+  font-size:2.5em;
+}
+
+#menusection h3 {
+  display:block;
+  margin:auto;
+  color:black;
 }
 
 #menusection h4 {
   display:block;
   margin:auto;
+  color:black;
 }
 
+/*human menu*/
 .humanmenugrid {
   background-image: url(assets/background1.png);
   margin:0em auto 1em auto;
@@ -211,10 +277,6 @@ width:25%
   text-align: center;
   }
 
-.humancol-1-4 p {
-  text-align: center;
-  }
-
 .humanmodule {
   padding: 1em;
 }
@@ -225,6 +287,12 @@ width:25%
   width:8em;
   height:8em;
 }
+
+.humancol-1-4 p {
+  text-align: center;
+  }
+
+/*cat menu*/
 
 .catmenugrid {
   background-image: url(assets/background1.png);
@@ -257,22 +325,29 @@ width:25%
   height:8em;
 }
 
+.catcol-1-4 p {
+  text-align: center;
+  }
+
 /*private parties section*/
 
 #privatepartiessection {
-  font-family:'Allerta', sans-serif;
-  width:100%;
-  background-image: url(assets/background1.png);
+  margin:1em auto 0em auto;
+  padding:1em 0em 1em 1em;
+  width:90%;
+  background-color: #1e77e2;
+  color:white;
 }
 
 #privatepartiessection h2 {
-  width:100%;
-  padding-left:1em;
+  font-weight: bolder;
+  font-size:2.5em;
 }
 
 #privatepartiessection p {
   width:98%;
-  margin:0 auto
+  margin:0 auto 0 auto;
+  padding-top: 1em;
 }
 
 #privatepartiessection span {
@@ -292,7 +367,6 @@ width:25%
   width:95%;
   margin:0 auto 0em auto;
   padding:.5em 0em .5em .5em;
-  background-image: url(assets/background1.png);
 }
 
 .ppgrid:after {
