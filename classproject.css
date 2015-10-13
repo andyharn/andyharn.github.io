@@ -297,7 +297,7 @@ width:25%
 
 .catmenugrid {
   background-image: url(assets/background1.png);
-  margin:0em auto 3em auto;
+  margin:0em auto 0em auto;
   padding:1em 0em 1em 1em;
   width:80%;
 }
@@ -359,7 +359,7 @@ width:25%
 }
 
 .privateplist {
-  margin:2em;
+  margin:1em;
   width:30%;
   display:block;
 }
