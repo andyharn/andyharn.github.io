@@ -14,7 +14,7 @@
   /*headerstyling*/
 
 header {
-  background-color: #955A47;
+  background-color: #B0A48A;
   font-family:'Allerta', sans-serif;
   position:fixed;
   top:0;
@@ -92,7 +92,7 @@ header {
 }
 
 .headermenu ul li a:hover {
-  color:#aaa;
+  color:#778899;
 }
 
 /*main content to clear the fixed header*/
@@ -100,7 +100,7 @@ header {
 .maincontainer {
   padding-top:5em;
   width: 100%;
-  background-color:#F0F0EF;
+  background-color:#F1EFE9;
 }
 
 /*picture section*/
@@ -127,7 +127,7 @@ header {
   margin:1em auto 0em auto;
   padding:1em 0em 1em 1em;
   width:90%;
-  background-color: #B1BD5D;
+  background-color: #BECEB0;
   color:white;
 }
 
@@ -184,7 +184,7 @@ header {
   margin:1em auto 0em auto;
   padding:1em 0em 1em 1em;
   width:90%;
-  background-color: #B1BD5D;
+  background-color: #BECEB0;
   color:white;
 }
 
@@ -237,7 +237,7 @@ header {
   margin:1em auto 0em auto;
   padding:1em 0em 1em 1em;
   width:90%;
-  background-color: #B1BD5D;
+  background-color: #BECEB0;
   color:white;
 }
 
@@ -337,7 +337,7 @@ header {
   margin:1em auto 0em auto;
   padding:1em 0em 1em 1em;
   width:90%;
-  background-color: #B1BD5D;
+  background-color: #BECEB0;
   color:white;
 }
 
@@ -397,15 +397,16 @@ header {
 /*contact section*/
 
 #contactsection {
-  background-color: #EDD690;
+  background-color: #34857F;
   font-family:'Allerta', sans-serif;
   overflow: hidden;
   margin-top:1em;
   color:white;
 }
 #contactsection h2 {
-  width:100%;
-  margin:1em;
+  font-weight: bolder;
+  font-size:2.5em;
+  padding-bottom:.5em;
 }
 
 .contactcontainer {
