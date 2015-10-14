@@ -288,6 +288,7 @@ header {
   margin:auto;
   width:8em;
   height:8em;
+  border-radius: 4em;
 }
 
 .humancol-1-4 p {
@@ -325,6 +326,7 @@ header {
   margin:auto;
   width:8em;
   height:8em;
+  border-radius: 4em;
 }
 
 .catcol-1-4 p {
