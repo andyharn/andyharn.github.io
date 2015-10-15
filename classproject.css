@@ -170,6 +170,10 @@ header {
   text-align: center;
 }
 
+.welcomemodule {
+  padding:.5em;
+}
+
 .catplayground {
   width:100%;
   max-height: 30em;
@@ -220,6 +224,10 @@ header {
   text-align: center;
 }
 
+.aboutmodule {
+  padding:.5em;
+}
+
 .owners {
   display: block;
   width: 100%;
@@ -250,7 +258,7 @@ header {
 
 #menusection {
   margin:1em auto 0em auto;
-  padding:1em 0em 1em 1em;
+  padding:1em 1em 1em 1em;
   width:90%;
   background-color: #A8E4B1;
   color:white;
