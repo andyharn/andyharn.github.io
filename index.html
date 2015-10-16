@@ -5,134 +5,134 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="classproject.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <title>Kitty Cat Cafe and Catering</title>
   </head>
 <!--Note:This webpage is an inside joke with my brother and sister...not that there is anything wrong with cats or cat people-->
   <body>
-<!--start of header section-->
-    <header>
-        <div class="headergrid">
-            <div class="headertitlecol-2-5">
-              <div class="headertitlemodule">
-                <h1><span>Kevin & Sarah's</span> Kitty Cat Cafe</h1>
-                <p>"What greater gift than the love of a cat?”—Charles Dickens</p>
-              </div>
-            </div>
-            <div class="headermenucol-3-5">
-              <div class="headermenumodule">
-                <ul>
-                  <li><a href="#aboutsection">About</a></li>
-                  <li><a href="#menusection">Menu</a></li>
-                  <li><a href="#privatepartiessection">Private<br><span>Cat</span>ering</a></li>
-                  <li><a href="#contactsection">Contact</a></li>
-                </ul>
-              </div>
-            </div>
+<!--header section-->
+    <header id="header">
+      <div class="headergrid">
+        <div class="headertitlecol-2-5">
+          <div class="headertitlemodule">
+            <a href="#home"><h1><span>Kevin & Sarah's</span> Kitty Cat Cafe</h1>
+            <p>"What greater gift than the love of a cat?”—Charles Dickens</p></a>
+          </div>
         </div>
+        <div class="headermenucol-3-5">
+          <div class="headermenumodule">
+            <ul>
+              <li><a href="#aboutsection">About</a></li>
+              <li><a href="#menusection">Menu</a></li>
+              <li><a href="#privatepartiessection">Private<br><span>Cat</span>ering</a></li>
+              <li><a href="#contactsection">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
 <!--main section-->
-    <div class="maincontainer">
+    <div id="home" class="maincontainer">
 <!--photo section below header-->
-      <div class="photogallarysection">
-          <img class="mainpic1" src="assets/insidestore1.jpg" alt="View inside Kitty Cat Cafe">
-      </div>
+    <div class="photogallarysection">
+      <img class="mainpic1" src="assets/insidestore1.jpg" alt="View inside Kitty Cat Cafe">
+    </div>
 <!--welcome section-->
-      <section id="welcomesection">
-          <div class="welcomesectiongrid"> <!--formarlly about section innerwrapper2-->
-            <div class=welcomecol-1-4>
-              <div class="welcomemodule">
-                <h2>Welcome</h2>
-                <p>Welcome to Kitty Cat Cafe, nestled in Baltimore's Fell's Point neighborhood. Kitty Cat Cafe serves up delicious dishes for humans and cats alike, while boasting the <span>top</span> rated indoor cat playground in Maryland.</p>
-              </div>
-            </div>
-            <div class="welcomecol-3-4">
-              <div class="welcomemodule">
-                <img class="catplayground" src="assets/catplayground.jpg" alt="cat playground">
-              </div>
-            </div>
+    <section id="welcomesection">
+      <div class="welcomesectiongrid">
+        <div class=welcomecol-1-4>
+          <div class="welcomemodule">
+            <h2>Welcome</h2>
+            <p>Welcome to Kitty Cat Cafe, nestled in Baltimore's Fell's Point neighborhood. Kitty Cat Cafe serves up delicious dishes for humans and cats alike, while boasting the <span>top</span> rated indoor cat playground in Maryland.</p>
           </div>
         </div>
-      </section>
+        <div class="welcomecol-3-4">
+          <div class="welcomemodule">
+            <img class="catplayground" src="assets/catplayground.jpg" alt="cat playground">
+          </div>
+        </div>
+      </div>
+    </section>
 <!--about section-->
-      <section id="aboutsection">
-        <div class="aboutsectiongrid"> <!--formally aboutsectionwrapper-->
-          <div class="aboutcol-1-4">
-            <div class="aboutmodule">
-              <img class="owners" src="assets/owners2.png" alt="picture of owners2">
-            </div>
-          </div>
-          <div class="aboutcol-3-4">
-            <div class="aboutmodule">
-              <h2>About</h2>
-              <p>Kitty Cat Cafe has been a dream come true for owners Kevin and Sarah Hamish (seen in the picture on the left). These cat addicted siblings have always yearned to bring their best buddies (their cats) with them while eating out at restaurants. In 2013 they finally took things into their own hands...or <span>paws</span> and opened Kitty Cat Cafe. Patrons are not only allowed but encouraged to bring their feline friends to come enjoy an experience they will both LOVE.</p>
-            </div>
+    <section id="aboutsection">
+      <div class="aboutsectiongrid">
+        <div class="aboutcol-1-4">
+          <div class="aboutmodule">
+            <img class="owners" src="assets/owners2.png" alt="picture of owners2">
           </div>
         </div>
-      </section>
+        <div class="aboutcol-3-4">
+          <div class="aboutmodule">
+            <h2>About</h2>
+            <p>Kitty Cat Cafe has been a dream come true for owners Kevin and Sarah Hamish (seen in the picture on the left). These cat addicted siblings have always yearned to bring their best buddies (their cats) with them while eating out at restaurants. In 2013 they finally took things into their own hands...or <span>paws</span> and opened Kitty Cat Cafe. Patrons are not only allowed but encouraged to bring their feline friends to come enjoy an experience they will both LOVE.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 <!--menu section-->
-      <section id="menusection">
-        <h2>Menus</h2>
+    <section id="menusection">
+    <h2>Menus</h2>
   <!--human menu-->
-          <article class="humanmenugrid">
-            <h3>Human Menu</h3>
-              <div class="humancol-1-4">
-                <div class="humanmodule">
-                  <h4>Beef Tartar</h4>
-                  <img src="assets/beef.jpg" alt="Beef">
-                </div>
-              </div>
-              <div class="humancol-1-4">
-                <div class="humanmodule">
-                  <h4>Pulled BBQ Chicken</h4>
-                  <img src="assets/chicken.jpg" alt="Chicken">
-                </div>
-              </div>
-              <div class="humancol-1-4">
-                <div class="humanmodule">
-                  <h4>Cereal</h4>
-                  <img src="assets/cereal.jpg" alt="Cereal">
-                </div>
-              </div>
-              <div class="humancol-1-4">
-                <div class="humanmodule">
-                  <h4>Meatloaf</h4>
-                  <img src="assets/meatloaf.png" alt="Meatloaf">
-                </div>
-              </div>
-          </article>
+      <article class="humanmenugrid">
+      <h3>Human Menu</h3>
+        <div class="humancol-1-4">
+          <div class="humanmodule">
+            <h4>Beef Tartar</h4>
+            <img src="assets/beef.jpg" alt="Beef">
+          </div>
+        </div>
+        <div class="humancol-1-4">
+          <div class="humanmodule">
+            <h4>Pulled BBQ Chicken</h4>
+            <img src="assets/chicken.jpg" alt="Chicken">
+          </div>
+        </div>
+        <div class="humancol-1-4">
+          <div class="humanmodule">
+            <h4>Cereal</h4>
+            <img src="assets/cereal.jpg" alt="Cereal">
+          </div>
+        </div>
+        <div class="humancol-1-4">
+          <div class="humanmodule">
+            <h4>Meatloaf</h4>
+            <img src="assets/meatloaf.png" alt="Meatloaf">
+          </div>
+        </div>
+      </article>
   <!--cat menu-->
-          <article class="catmenugrid">
-            <h3>Cat Menu</h3>
-              <div class="catcol-1-4">
-                <div class="catmodule">
-                  <h4>Grass Fed Beef Cat Food</h4>
-                  <img src="assets/beef.jpg" alt="Beef">
-                </div>
-              </div>
-              <div class="catcol-1-4">
-                <div class="catmodule">
-                  <h4>Free Range Chicken Cat Food</h4>
-                  <img src="assets/chicken.jpg" alt="Chicken">
-                </div>
-              </div>
-              <div class="catcol-1-4">
-                <div class="catmodule">
-                  <h4>Gourmet Dry Cat Food</h4>
-                  <img src="assets/cereal.jpg" alt="Dry">
-                </div>
-              </div>
-              <div class="catcol-1-4">
-                <div class="catmodule">
-                  <h4>Organic Canned Cat Food</h4>
-                  <img src="assets/meatloaf.png" alt="Canned">
-                </div>
-              </div>
-          </article>
-        </section>
+      <article class="catmenugrid">
+      <h3>Cat Menu</h3>
+        <div class="catcol-1-4">
+          <div class="catmodule">
+            <h4>Grass Fed Beef Cat Food</h4>
+            <img src="assets/beef.jpg" alt="Beef">
+          </div>
+        </div>
+        <div class="catcol-1-4">
+          <div class="catmodule">
+            <h4>Free Range Chicken Cat Food</h4>
+            <img src="assets/chicken.jpg" alt="Chicken">
+          </div>
+        </div>
+        <div class="catcol-1-4">
+          <div class="catmodule">
+            <h4>Gourmet Dry Cat Food</h4>
+            <img src="assets/cereal.jpg" alt="Dry">
+          </div>
+        </div>
+        <div class="catcol-1-4">
+          <div class="catmodule">
+            <h4>Organic Canned Cat Food</h4>
+            <img src="assets/meatloaf.png" alt="Canned">
+          </div>
+        </div>
+      </article>
+    </section>
   <!--private parties and catering-->
-      <section id="privatepartiessection">
-        <h2>Private <span>Cat</span>ering</h2>
-        <div class="privatepcontainer">
+    <section id="privatepartiessection">
+      <h2>Private <span>Cat</span>ering</h2>
+      <div class="privatepcontainer">
           <p>Kevin, Sarah, and the Kitty Cat Cafe can <span>cat</span>er the <span>purr</span>fect party. <span>Cat</span>ering services include food (for human and/or cat) and entertainment. We specialize in various themed events, including some of our most popular seen below:</p>
           <div class="privateplist">
             <ul>
@@ -206,7 +206,12 @@
         </div>
       </section>
   </div>
-    <!--end of main section-->
+  <!--end of main section-->
+
+  <!--external Javascript links-->
+  <script src="js/smoothscrolloffset.js"></script>
+  <!--end of Javasript-->
+
   </body>
 
 </html>
