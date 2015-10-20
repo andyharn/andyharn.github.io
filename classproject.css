@@ -22,12 +22,12 @@ header {
   right:0;
   color:white;
   box-sizing: border-box;
-  padding:.75em 0em .75em 0em;
+  padding:0em;
 }
 
 .headergrid {
   width:95%;
-  padding:1em 0em 1em 1em;
+  padding:.75em 0em .75em .75em;
   margin:0 auto 0 auto;
 }
 
@@ -41,11 +41,11 @@ header {
 .headertitlecol-2-5 {
   width:40%;
   float:left;
-  padding-right:1em;
+  padding-right:.75em;
 }
 
 .headertitlemodule {
-  padding:1em;
+  padding:.75em;
 }
 
 .headertitlemodule a {
@@ -73,11 +73,11 @@ header {
 .headermenucol-3-5 {
   float:left;
   width:60%;
-  padding-right:1em;
+  padding-right:.75em;
 }
 
 .headermenumodule {
-  padding:1em;
+  padding:.75em;
 }
 
 .headermenumodule::after {
