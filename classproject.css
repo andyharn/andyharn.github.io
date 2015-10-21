@@ -122,7 +122,7 @@ header {
 /*main content to clear the fixed header*/
 
 .maincontainer {
-  padding-top:5em;
+/*  padding-top:5em; */        /*get rid of top padding*/
   width: 100%;
   background-color:white;
 }
