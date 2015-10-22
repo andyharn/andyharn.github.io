@@ -206,7 +206,19 @@
           <div class="contactcol-3-10">
             <div class="contactmodule">
               <h3>Make a Reservation</h3>
-              <p>insert form here!</p>
+              <form action="http://formspree.io/andyhar@yahoo.com" method="post">
+                <label for="date">Date:</label>
+                  <input type="date"name="reservationdate" required>
+                <label for="time">Time:</label>
+                  <input type="time"name="reservationtime" required>
+                <label for="Name">First Name:</label>
+                  <input type="text" name="firstname" required>
+                <label for="Name">Last Name:</label>
+                  <input type="text" name="lasttname" required>
+                <br>
+                <input type="submit" value="send">
+                <input type="hidden" name="_next" value="//thankyou/index.html"/>
+              </form>
             </div>
           </div>
         </div>

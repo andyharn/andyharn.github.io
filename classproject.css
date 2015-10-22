@@ -469,7 +469,6 @@ header {
   float:left;
   width:40%;
   padding-right:1em;
-  text-align: center;
 }
 
 .contactmodule {
@@ -483,6 +482,13 @@ header {
 }
 .contactsectiongrid h3{
   text-decoration: underline;
+  text-align: center;
+}
+
+.contactsectiongrid form {
+  display:block;
+  width:4em;
+
 }
 
 /*footer section*/
