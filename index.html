@@ -178,6 +178,7 @@
       <section id="contactsection">
         <div class="contactsectiongrid">
           <h2>Contact</h2>
+          <div class="innercontact">
           <div class="contactcol-1-6">
             <div class="contactmodule">
               <h3>Address</h3>
@@ -209,20 +210,23 @@
             <div class="contactmodule">
               <h3>Make an online reservation</h3>
               <form action="http://formspree.io/andyhar@yahoo.com" method="post">
-                <label for="date">Date:</label>
+                <label for="date">Date</label>
                   <input type="date"name="reservationdate" required>
-                <label for="time">Time:</label>
+                <label for="time">Time</label>
                   <input type="time"name="reservationtime" required>
-                <label for="Name">First Name:</label>
+                <label for="Name">First Name</label>
                   <input type="text" name="firstname" required>
-                <label for="Name">Last Name:</label>
+                <label for="Name">Last Name</label>
                   <input type="text" name="lasttname" required>
+                <label for="email">Email</label>
+                  <input type="email" name="email" require>
                 <br>
                 <input type="submit" value="send">
                 <input type="hidden" name="_next" value="/thankyou/index.html"/>
               </form>
             </div>
           </div>
+        </div>
         </div>
       </section>
   <!--footer section-->

@@ -485,6 +485,16 @@ header {
   content:"";
 }
 
+.innercontact {
+  width:90%;
+  margin:0 auto 0 auto;
+}
+
+.innercontact::after {
+  display:table;
+  clear:both;
+  content:"";
+}
 .contactcol-1-6 {
   float:left;
   width:20%;
@@ -520,7 +530,16 @@ header {
 
 .contactsectiongrid form {
   display:block;
-  width:5em;
+  width:7em;
+}
+
+input {
+  margin-top: .5em;
+}
+
+label {
+  display: block;
+  margin-top: .5em;
 }
 
 /*label {
