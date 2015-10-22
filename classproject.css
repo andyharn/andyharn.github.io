@@ -458,27 +458,33 @@ header {
   content:"";
 }
 
-.contactcol-1-4 {
+.contactcol-1-6 {
   float:left;
   width:20%;
   padding-right:1em;
   text-align: center;
 }
 
+.contactcol-1-4 {
+  float:left;
+  width:25%;
+  padding-right:1em;
+  text-align: center;
+}
+
 .contactcol-3-10 {
   float:left;
-  width:40%;
+  width:35%;
   padding-right:1em;
 }
 
 .contactmodule {
-  padding:1em;
+  padding:.5em;
 }
 
 .contactsectiongrid ul{
   list-style-type: none;
   text-align: center;
-  font-size: .85em;
 }
 .contactsectiongrid h3{
   text-decoration: underline;
@@ -487,8 +493,7 @@ header {
 
 .contactsectiongrid form {
   display:block;
-  width:4em;
-
+  width:5em;
 }
 
 /*footer section*/
