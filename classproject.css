@@ -370,11 +370,10 @@ header {
 /*private parties section*/
 
 #privatepartiessection {
-  margin:1em auto 0em auto;
-  padding:1em 0em 1em 1em;
-  width:90%;
-  background-color: #DA5C53;
-  color:white;
+  font-family:'Allerta', sans-serif;
+  width:100%;
+  overflow:hidden;
+  box-sizing: border-box;
 }
 
 #privatepartiessection h2 {
@@ -395,28 +394,56 @@ header {
   margin:.25em;
 }
 
+.privatepartiesgrid {
+  margin:1em auto 0em auto;
+  padding:1em 0em 1em 1em;
+  width:90%;
+  background-color: #DA5C53;
+  color:white;
+}
+
+.privatepartiesgrid::after {
+  display:table;
+  clear:both;
+  content:"";
+}
+
+.ppgrid1 {
+  width:100%;
+  padding-right:1em;
+}
+
 .privateplist {
   margin:1em;
   width:30%;
   display:block;
 }
 
-.ppgrid {
-  width:95%;
-  margin:0 auto 0em auto;
-  padding:.5em 0em .5em .5em;
+.ppgrid1::after {
+  display:table;
+  clear:both;
+  content:"";
 }
 
-.ppgrid:after {
-  clear:both;
+.ppgrid2 {
+  width:100%;
+  padding-right:1em;
+}
+
+.ppgrid2::after {
   display:table;
+  clear:both;
   content:"";
-  }
+}
 
 .partypic-1-5 {
   float: left;
   padding-right:.5em;
   width:20%;
+}
+
+.partypic-1-5:last-of-type {
+  padding-right:0;
 }
 
 .ppmodule {
@@ -467,14 +494,14 @@ header {
 
 .contactcol-1-4 {
   float:left;
-  width:25%;
+  width:30%;
   padding-right:1em;
   text-align: center;
 }
 
 .contactcol-3-10 {
   float:left;
-  width:35%;
+  width:30%;
   padding-right:1em;
 }
 
