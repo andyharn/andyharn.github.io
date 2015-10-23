@@ -469,11 +469,12 @@ header {
 #contactsection h2 {
   font-weight: bolder;
   font-size:2.5em;
+  padding:0 0 .5em .5em;
 }
 
 .contactsectiongrid {
   margin:1em auto 0em auto;
-  padding:1em 0em 1em 1em;
+  padding:1em 0em 1em 0em;
   width:100%;
   background-color:#4AA3BA;
   color:white;
@@ -495,36 +496,47 @@ header {
   clear:both;
   content:"";
 }
+.contactcol-1-8 {
+  float:left;
+  width:17%;
+  text-align: center;
+  border:white solid .2em;
+  margin-right:1%;
+}
+
 .contactcol-1-6 {
   float:left;
-  width:20%;
-  padding-right:1em;
+  width:22%;
   text-align: center;
+  border:white solid .2em;
+  margin-right:1%;
 }
 
 .contactcol-1-4 {
   float:left;
-  width:30%;
-  padding-right:1em;
+  width:29%;
   text-align: center;
+  border:white solid .2em;
+  margin-right:1%;
 }
 
 .contactcol-3-10 {
   float:left;
-  width:30%;
-  padding-right:1em;
+  width:29%;
+  border:white solid .2em;
 }
 
 .contactmodule {
   padding:.5em;
 }
 
-.contactsectiongrid ul{
+.contactsectiongrid ul {
   list-style-type: none;
   text-align: center;
 }
-.contactsectiongrid h3{
-  text-decoration: underline;
+
+.contactsectiongrid h3 {
+  border-bottom:white solid .2em;
   text-align: center;
 }
 
