@@ -502,6 +502,7 @@ header {
   text-align: center;
   border:white solid .2em;
   margin-right:1%;
+  border-radius: 2em;
 }
 
 .contactcol-1-6 {
@@ -510,6 +511,7 @@ header {
   text-align: center;
   border:white solid .2em;
   margin-right:1%;
+  border-radius: 2em;
 }
 
 .contactcol-1-4 {
@@ -518,12 +520,14 @@ header {
   text-align: center;
   border:white solid .2em;
   margin-right:1%;
+  border-radius: 2em;
 }
 
 .contactcol-3-10 {
   float:left;
   width:29%;
   border:white solid .2em;
+  border-radius: 2em;
 }
 
 .contactmodule {
@@ -549,15 +553,17 @@ input {
   margin-top: .5em;
 }
 
+input[type="submit"] {
+  margin-left: .75em;
+  background-color:white;
+  border:#306D75 .1em solid;
+  color:#306D75;
+}
+
 label {
   display: block;
   margin-top: .5em;
 }
-
-/*label {
-  width:30%;
-}
-*/
 
 /*footer section*/
 
@@ -567,4 +573,48 @@ footer {
   color:white;
   box-sizing: border-box;
   padding:0em;
+  width:100%;
+}
+
+footer::after {
+  display:table;
+  clear:both;
+  content:"";
+}
+
+.svggrid::after {
+  display:table;
+  clear:both;
+  content:"";
+}
+
+.svggrid {
+  width:25%;
+  padding:.5em 0 .5em .5em;
+  margin:0 auto 0 auto;
+}
+
+.footcol-1-3 {
+  float:left;
+  width:33.33%;
+  padding-right:.5em;
+}
+
+  /*SVG CSS*/
+.svg-icon {
+  width: 1.75em;
+  height: 1.75em;
+  display:block;
+  margin: 0 auto;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: white;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
 }
