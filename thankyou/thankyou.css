@@ -142,4 +142,16 @@ a {
   color:black;
 }
 
+p a:link {
+  text-decoration: none;
+  color:inherit;
+}
+
+ p a:link, a:visited {
+  color:inherit;
+}
+
+p a:hover {
+  color:#778899;
+
 /*picture section*/
