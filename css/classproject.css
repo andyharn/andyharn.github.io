@@ -23,6 +23,7 @@ header {
   color:white;
   box-sizing: border-box;
   padding:0em;
+  z-index: 11;
 }
 
 .headergrid {
