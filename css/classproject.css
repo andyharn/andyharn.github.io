@@ -432,7 +432,12 @@ header {
   content:"";
 }
 
-/* Responsive Slide CSS-didnt work, not sure why
+/*CSS markup for jqueryslides.min.js, did not work*/
+#slides {
+   display:none;
+ }
+
+/* CSS markup for responsiveslides.min.js, did not work
 .rslides {
 position: relative;
 list-style: none;
