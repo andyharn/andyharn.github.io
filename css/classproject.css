@@ -432,10 +432,11 @@ header {
   content:"";
 }
 
-/*CSS markup for jqueryslides.min.js, did not work*/
+/*CSS markup for jqueryslides.min.js, did not work
 #slides {
    display:none;
  }
+*/
 
 /* CSS markup for responsiveslides.min.js, did not work
 .rslides {
