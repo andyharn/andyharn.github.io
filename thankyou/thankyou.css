@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Allerta);
+@import url(https://fonts.googleapis.com/css?family=Lobster+Two);
+
+* {
+  margin:0;
+  padding:0;
+  border:0;
+  box-sizing: border-box;
+  font-family:'Allerta', sans-serif;
+}
+
+/* header section*/
+
+  /*headerstyling*/
+
+header {
+  background-color: #306D75;
+  font-family:'Allerta', sans-serif;
+  width:100%;
+  color:white;
+  box-sizing: border-box;
+  padding:0em;
+}
+
+.headergrid {
+  width:95%;
+  padding:.75em 0em .75em .75em;
+  margin:0 auto 0 auto;
+}
+
+.headergrid::after {
+  display:table;
+  clear:both;
+  content:"";
+}
+  /*header title*/
+
+.headertitlecol-2-5 {
+  width:40%;
+  float:left;
+  padding-right:.75em;
+}
+
+.headertitlemodule {
+  padding:.75em;
+}
+
+.headertitlecol-2-5 h1 {
+  font-size:1.80em;
+  width:100%;
+}
+
+.headertitlecol-2-5 p {
+  font-size: .80em;
+  width:100%;
+}
+
+.headertitlecol-2-5 span {
+  font-family: 'Lobster Two', cursive;
+  font-size:.80em;
+}
+
+  /*header menu*/
+
+.headermenucol-3-5 {
+  float:left;
+  width:60%;
+  padding-right:.75em;
+}
+
+.headermenumodule {
+  padding:.75em;
+}
+
+.headermenumodule::after {
+  display:table;
+  clear:both;
+  content:"";
+}
+
+.headermenucol-3-5 ul {
+  list-style-type: none;
+}
+
+.headermenucol-3-5 ul li {
+  float:left;
+  padding-top:1em;
+  padding-left:3.5em;
+  width:25%;
+  text-align: center;
+}
+
+.headermenucol-3-5 ul li a span {
+  font-weight: bold;
+  font-family: 'Lobster Two', cursive;
+  font-weight: bold;
+  font-style: italic;
+  margin:.25em;
+}
+
+.headermenucol-3-5 ul li a:link {
+  text-decoration: none;
+  color:inherit;
+}
+
+.headermenucol-3-5 ul li a:link, a:visited {
+  color:inherit;
+}
+
+.headermenucol-3-5 ul li a:hover {
+  color:#778899;
+}
+
+/*main content to clear the fixed header*/
+
+body {
+  background-image: url(../assets/background1.png);
+  background-size: cover;
+}
+.maincontainer {
+  width: 50%;
+  text-align: center;
+  color:black;
+  clear:both;
+  margin:10em auto 0 auto;
+}
+
+.maincontainer p {
+  font-weight:bolder;
+  margin:5em;
+}
+.maincontainer span {
+  font-weight: bold;
+  font-family: 'Lobster Two', cursive;
+  font-weight: bold;
+  font-style: italic;
+  margin:.25em;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+p a:link {
+  text-decoration: none;
+  color:inherit;
+}
+
+ p a:link, a:visited {
+  color:inherit;
+}
+
+p a:hover {
+  color:#778899;
+
+/*picture section*/
