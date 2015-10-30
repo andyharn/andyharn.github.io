@@ -1,4 +1,4 @@
-<script>
+
 $(function(){
   $("#slides").slidesjs({
     play: {
@@ -20,4 +20,3 @@ $(function(){
     }
   });
 });
-</script>
