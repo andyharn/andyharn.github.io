@@ -9,31 +9,15 @@
     <title>Kitty Cat Cafe and Catering</title>
   <!--JS in head-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!--Responsiveslides JS Markup
+    <script src="js/responsiveslides.min.js"></script>
+    <script src="js/slideoption2.js"></script>
+  -->
+
     <script src="js/jquery.slides.min.js"></script>
-      <!--  <script>
-        $(function(){
-          $("#slides").slidesjs({
-            play: {
-              active: true,
-                // [boolean] Generate the play and stop buttons.
-                // You cannot use your own buttons. Sorry.
-              effect: "slide",
-                // [string] Can be either "slide" or "fade".
-              interval: 5000,
-                // [number] Time spent on each slide in milliseconds.
-              auto: true,
-                // [boolean] Start playing the slideshow on load.
-              swap: true,
-                // [boolean] show/hide stop and play buttons
-              pauseOnHover: false,
-                // [boolean] pause a playing slideshow on hover
-              restartDelay: 2500
-                // [number] restart delay on inactive slideshow
-              }
-            });
-            });
-          </script>-->
     <script src="js/slideoptions.js"></script>
+
   </head>
 <!--Note:This webpage is an inside joke with my brother and sister...not that there is anything wrong with cats or cat people-->
   <body>
@@ -174,16 +158,31 @@
             </ul>
           </div>
         </div>
-        <!--HTML mark up for new "jquery.slides.min.js"-->
-        <div id="slides">
-          <img src="assets/party.jpg" alt="Party Cats">
-          <img src="assets/halloween1.jpg" alt="Halloween">
-          <img src="assets/kimonos.jpg" alt="Cats in Kimonos">
-          <img src="assets/christmas.jpg" alt="Christmas">
-          <img src="assets/pool.jpg" alt="Pool Party!">
+        <div class="ppgrid2">
+        <div class="piccontainer">
+          <div id="slides">
+            <img src="assets/party.jpg" alt="Party Cats">
+            <img src="assets/halloween1.jpg" alt="Halloween">
+            <img src="assets/kimonos.jpg" alt="Cats in Kimonos">
+            <img src="assets/christmas.jpg" alt="Christmas">
+            <img src="assets/pool.jpg" alt="Pool Party!">
+          </div>
         </div>
+      </div>
 
-        <!-- Normal HTML for section, commented out to save as default for section
+<!--Responsiveslides JS Markup
+    <div class="ppgrid2">
+      <ul class="rslides">
+          <li><img src="assets/party.jpg" alt="Party Cats"></li>
+          <li><img src="assets/halloween1.jpg" alt="Halloween"></li>
+          <li><img src="assets/kimonos.jpg" alt="Cats in Kimonos"></li>
+          <li><img src="assets/christmas.jpg" alt="Christmas"></li>
+          <li><img src="assets/pool.jpg" alt="Pool Party!"></li>
+      </ul>
+    <div>
+      -->
+
+<!-- Orginal HTML for section. Saved as default
           <div class="partypic-1-5">
             <div class="ppmodule">
               <img src="assets/party.jpg" alt="Party Cats">

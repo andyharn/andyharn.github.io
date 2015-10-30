@@ -417,8 +417,9 @@ header {
 }
 
 .ppgrid1 {
-  width:100%;
+  width:50%;
   padding-right:1em;
+  float:left;
 }
 
 .privateplist {
@@ -427,30 +428,60 @@ header {
   display:block;
 }
 
-.ppgrid1::after {
-  display:table;
-  clear:both;
-  content:"";
+.ppgrid2 {
+  width:50%;
+  padding-right:1em;
+  float:left;
 }
 
-/*CSS markup for jqueryslides.min.js, did not work
-#slides {
-   display:none;
- }
+.ppgrid2 a {
+  display:inline-block;
+  margin: 1em;
+}
+
+.ppgrid2 img{
+height:29em;
+}
+
+.slidesjs-pagination-item {
+  display:none;
+}
+
+/*Responsiveslides JS-CSS Markup
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
 */
 
-.ppgrid2 {
-  width:100%;
-  padding-right:1em;
-}
-
-.ppgrid2::after {
-  display:table;
-  clear:both;
-  content:"";
-}
-
-/* Orginal CSS markup commmented out to revert back as default
+/* Orginal CSS markup for section.Saved as default
 .partypic-1-5 {
   float: left;
   padding-right:.5em;
