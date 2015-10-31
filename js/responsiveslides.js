@@ -1,7 +1,391 @@
-/*
-  SlidesJS 3.0.3 http://slidesjs.com
-  (c) 2013 by Nathan Searles http://nathansearles.com
-  Updated: March 15th, 2013
-  Apache License: http://www.apache.org/licenses/LICENSE-2.0
-*/
-(function(){(function(a,b,c){var d,e,f;return f="slidesjs",e={width:940,height:528,start:1,navigation:{active:!0,effect:"slide"},pagination:{active:!0,effect:"slide"},play:{active:!1,effect:"slide",interval:5e3,auto:!1,swap:!0,pauseOnHover:!1,restartDelay:2500},effect:{slide:{speed:500},fade:{speed:300,crossfade:!0}},callback:{loaded:function(){},start:function(){},complete:function(){}}},d=function(){function b(b,c){this.element=b,this.options=a.extend(!0,{},e,c),this._defaults=e,this._name=f,this.init()}return b}(),d.prototype.init=function(){var c,d,e,f,g,h,i=this;return c=a(this.element),this.data=a.data(this),a.data(this,"animating",!1),a.data(this,"total",c.children().not(".slidesjs-navigation",c).length),a.data(this,"current",this.options.start-1),a.data(this,"vendorPrefix",this._getVendorPrefix()),"undefined"!=typeof TouchEvent&&(a.data(this,"touch",!0),this.options.effect.slide.speed=this.options.effect.slide.speed/2),c.css({overflow:"hidden"}),c.slidesContainer=c.children().not(".slidesjs-navigation",c).wrapAll("<div class='slidesjs-container'>",c).parent().css({overflow:"hidden",position:"relative"}),a(".slidesjs-container",c).wrapInner("<div class='slidesjs-control'>",c).children(),a(".slidesjs-control",c).css({position:"relative",left:0}),a(".slidesjs-control",c).children().addClass("slidesjs-slide").css({position:"absolute",top:0,left:0,width:"100%",zIndex:0,display:"none",webkitBackfaceVisibility:"hidden"}),a.each(a(".slidesjs-control",c).children(),function(b){var c;return c=a(this),c.attr("slidesjs-index",b)}),this.data.touch&&(a(".slidesjs-control",c).on("touchstart",function(a){return i._touchstart(a)}),a(".slidesjs-control",c).on("touchmove",function(a){return i._touchmove(a)}),a(".slidesjs-control",c).on("touchend",function(a){return i._touchend(a)})),c.fadeIn(0),this.update(),this.data.touch&&this._setuptouch(),a(".slidesjs-control",c).children(":eq("+this.data.current+")").eq(0).fadeIn(0,function(){return a(this).css({zIndex:10})}),this.options.navigation.active&&(g=a("<a>",{"class":"slidesjs-previous slidesjs-navigation",href:"#",title:"Previous",text:"Previous"}).appendTo(c),d=a("<a>",{"class":"slidesjs-next slidesjs-navigation",href:"#",title:"Next",text:"Next"}).appendTo(c)),a(".slidesjs-next",c).click(function(a){return a.preventDefault(),i.stop(!0),i.next(i.options.navigation.effect)}),a(".slidesjs-previous",c).click(function(a){return a.preventDefault(),i.stop(!0),i.previous(i.options.navigation.effect)}),this.options.play.active&&(f=a("<a>",{"class":"slidesjs-play slidesjs-navigation",href:"#",title:"Play",text:"Play"}).appendTo(c),h=a("<a>",{"class":"slidesjs-stop slidesjs-navigation",href:"#",title:"Stop",text:"Stop"}).appendTo(c),f.click(function(a){return a.preventDefault(),i.play(!0)}),h.click(function(a){return a.preventDefault(),i.stop(!0)}),this.options.play.swap&&h.css({display:"none"})),this.options.pagination.active&&(e=a("<ul>",{"class":"slidesjs-pagination"}).appendTo(c),a.each(Array(this.data.total),function(b){var c,d;return c=a("<li>",{"class":"slidesjs-pagination-item"}).appendTo(e),d=a("<a>",{href:"#","data-slidesjs-item":b,html:b+1}).appendTo(c),d.click(function(b){return b.preventDefault(),i.stop(!0),i.goto(1*a(b.currentTarget).attr("data-slidesjs-item")+1)})})),a(b).bind("resize",function(){return i.update()}),this._setActive(),this.options.play.auto&&this.play(),this.options.callback.loaded(this.options.start)},d.prototype._setActive=function(b){var c,d;return c=a(this.element),this.data=a.data(this),d=b>-1?b:this.data.current,a(".active",c).removeClass("active"),a("li:eq("+d+") a",c).addClass("active")},d.prototype.update=function(){var b,c,d;return b=a(this.element),this.data=a.data(this),a(".slidesjs-control",b).children(":not(:eq("+this.data.current+"))").css({display:"none",left:0,zIndex:0}),d=b.width(),c=this.options.height/this.options.width*d,this.options.width=d,this.options.height=c,a(".slidesjs-control, .slidesjs-container",b).css({width:d,height:c})},d.prototype.next=function(b){var c;return c=a(this.element),this.data=a.data(this),a.data(this,"direction","next"),void 0===b&&(b=this.options.navigation.effect),"fade"===b?this._fade():this._slide()},d.prototype.previous=function(b){var c;return c=a(this.element),this.data=a.data(this),a.data(this,"direction","previous"),void 0===b&&(b=this.options.navigation.effect),"fade"===b?this._fade():this._slide()},d.prototype.goto=function(b){var c,d;if(c=a(this.element),this.data=a.data(this),void 0===d&&(d=this.options.pagination.effect),b>this.data.total?b=this.data.total:1>b&&(b=1),"number"==typeof b)return"fade"===d?this._fade(b):this._slide(b);if("string"==typeof b){if("first"===b)return"fade"===d?this._fade(0):this._slide(0);if("last"===b)return"fade"===d?this._fade(this.data.total):this._slide(this.data.total)}},d.prototype._setuptouch=function(){var b,c,d,e;return b=a(this.element),this.data=a.data(this),e=a(".slidesjs-control",b),c=this.data.current+1,d=this.data.current-1,0>d&&(d=this.data.total-1),c>this.data.total-1&&(c=0),e.children(":eq("+c+")").css({display:"block",left:this.options.width}),e.children(":eq("+d+")").css({display:"block",left:-this.options.width})},d.prototype._touchstart=function(b){var c,d;return c=a(this.element),this.data=a.data(this),d=b.originalEvent.touches[0],this._setuptouch(),a.data(this,"touchtimer",Number(new Date)),a.data(this,"touchstartx",d.pageX),a.data(this,"touchstarty",d.pageY),b.stopPropagation()},d.prototype._touchend=function(b){var c,d,e,f,g,h,i,j=this;return c=a(this.element),this.data=a.data(this),h=b.originalEvent.touches[0],f=a(".slidesjs-control",c),f.position().left>.5*this.options.width||f.position().left>.1*this.options.width&&250>Number(new Date)-this.data.touchtimer?(a.data(this,"direction","previous"),this._slide()):f.position().left<-(.5*this.options.width)||f.position().left<-(.1*this.options.width)&&250>Number(new Date)-this.data.touchtimer?(a.data(this,"direction","next"),this._slide()):(e=this.data.vendorPrefix,i=e+"Transform",d=e+"TransitionDuration",g=e+"TransitionTimingFunction",f[0].style[i]="translateX(0px)",f[0].style[d]=.85*this.options.effect.slide.speed+"ms"),f.on("transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd",function(){return e=j.data.vendorPrefix,i=e+"Transform",d=e+"TransitionDuration",g=e+"TransitionTimingFunction",f[0].style[i]="",f[0].style[d]="",f[0].style[g]=""}),b.stopPropagation()},d.prototype._touchmove=function(b){var c,d,e,f,g;return c=a(this.element),this.data=a.data(this),f=b.originalEvent.touches[0],d=this.data.vendorPrefix,e=a(".slidesjs-control",c),g=d+"Transform",a.data(this,"scrolling",Math.abs(f.pageX-this.data.touchstartx)<Math.abs(f.pageY-this.data.touchstarty)),this.data.animating||this.data.scrolling||(b.preventDefault(),this._setuptouch(),e[0].style[g]="translateX("+(f.pageX-this.data.touchstartx)+"px)"),b.stopPropagation()},d.prototype.play=function(b){var c,d,e,f=this;return c=a(this.element),this.data=a.data(this),!this.data.playInterval&&(b&&(d=this.data.current,this.data.direction="next","fade"===this.options.play.effect?this._fade():this._slide()),a.data(this,"playInterval",setInterval(function(){return d=f.data.current,f.data.direction="next","fade"===f.options.play.effect?f._fade():f._slide()},this.options.play.interval)),e=a(".slidesjs-container",c),this.options.play.pauseOnHover&&(e.unbind(),e.bind("mouseenter",function(){return f.stop()}),e.bind("mouseleave",function(){return f.options.play.restartDelay?a.data(f,"restartDelay",setTimeout(function(){return f.play(!0)},f.options.play.restartDelay)):f.play()})),a.data(this,"playing",!0),a(".slidesjs-play",c).addClass("slidesjs-playing"),this.options.play.swap)?(a(".slidesjs-play",c).hide(),a(".slidesjs-stop",c).show()):void 0},d.prototype.stop=function(b){var c;return c=a(this.element),this.data=a.data(this),clearInterval(this.data.playInterval),this.options.play.pauseOnHover&&b&&a(".slidesjs-container",c).unbind(),a.data(this,"playInterval",null),a.data(this,"playing",!1),a(".slidesjs-play",c).removeClass("slidesjs-playing"),this.options.play.swap?(a(".slidesjs-stop",c).hide(),a(".slidesjs-play",c).show()):void 0},d.prototype._slide=function(b){var c,d,e,f,g,h,i,j,k,l,m=this;return c=a(this.element),this.data=a.data(this),this.data.animating||b===this.data.current+1?void 0:(a.data(this,"animating",!0),d=this.data.current,b>-1?(b-=1,l=b>d?1:-1,e=b>d?-this.options.width:this.options.width,g=b):(l="next"===this.data.direction?1:-1,e="next"===this.data.direction?-this.options.width:this.options.width,g=d+l),-1===g&&(g=this.data.total-1),g===this.data.total&&(g=0),this._setActive(g),i=a(".slidesjs-control",c),b>-1&&i.children(":not(:eq("+d+"))").css({display:"none",left:0,zIndex:0}),i.children(":eq("+g+")").css({display:"block",left:l*this.options.width,zIndex:10}),this.options.callback.start(d+1),this.data.vendorPrefix?(h=this.data.vendorPrefix,k=h+"Transform",f=h+"TransitionDuration",j=h+"TransitionTimingFunction",i[0].style[k]="translateX("+e+"px)",i[0].style[f]=this.options.effect.slide.speed+"ms",i.on("transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd",function(){return i[0].style[k]="",i[0].style[f]="",i.children(":eq("+g+")").css({left:0}),i.children(":eq("+d+")").css({display:"none",left:0,zIndex:0}),a.data(m,"current",g),a.data(m,"animating",!1),i.unbind("transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd"),i.children(":not(:eq("+g+"))").css({display:"none",left:0,zIndex:0}),m.data.touch&&m._setuptouch(),m.options.callback.complete(g+1)})):i.stop().animate({left:e},this.options.effect.slide.speed,function(){return i.css({left:0}),i.children(":eq("+g+")").css({left:0}),i.children(":eq("+d+")").css({display:"none",left:0,zIndex:0},a.data(m,"current",g),a.data(m,"animating",!1),m.options.callback.complete(g+1))}))},d.prototype._fade=function(b){var c,d,e,f,g,h=this;return c=a(this.element),this.data=a.data(this),this.data.animating||b===this.data.current+1?void 0:(a.data(this,"animating",!0),d=this.data.current,b?(b-=1,g=b>d?1:-1,e=b):(g="next"===this.data.direction?1:-1,e=d+g),-1===e&&(e=this.data.total-1),e===this.data.total&&(e=0),this._setActive(e),f=a(".slidesjs-control",c),f.children(":eq("+e+")").css({display:"none",left:0,zIndex:10}),this.options.callback.start(d+1),this.options.effect.fade.crossfade?(f.children(":eq("+this.data.current+")").stop().fadeOut(this.options.effect.fade.speed),f.children(":eq("+e+")").stop().fadeIn(this.options.effect.fade.speed,function(){return f.children(":eq("+e+")").css({zIndex:0}),a.data(h,"animating",!1),a.data(h,"current",e),h.options.callback.complete(e+1)})):f.children(":eq("+d+")").stop().fadeOut(this.options.effect.fade.speed,function(){return f.children(":eq("+e+")").stop().fadeIn(h.options.effect.fade.speed,function(){return f.children(":eq("+e+")").css({zIndex:10})}),a.data(h,"animating",!1),a.data(h,"current",e),h.options.callback.complete(e+1)}))},d.prototype._getVendorPrefix=function(){var a,b,d,e,f;for(a=c.body||c.documentElement,d=a.style,e="transition",f=["Moz","Webkit","Khtml","O","ms"],e=e.charAt(0).toUpperCase()+e.substr(1),b=0;f.length>b;){if("string"==typeof d[f[b]+e])return f[b];b++}return!1},a.fn[f]=function(b){return this.each(function(){return a.data(this,"plugin_"+f)?void 0:a.data(this,"plugin_"+f,new d(this,b))})}})(jQuery,window,document)}).call(this);
+/*! ResponsiveSlides.js v1.54
+ * http://responsiveslides.com
+ * http://viljamis.com
+ *
+ * Copyright (c) 2011-2012 @viljamis
+ * Available under the MIT license
+ */
+
+/*jslint browser: true, sloppy: true, vars: true, plusplus: true, indent: 2 */
+
+(function ($, window, i) {
+  $.fn.responsiveSlides = function (options) {
+
+    // Default settings
+    var settings = $.extend({
+      "auto": true,             // Boolean: Animate automatically, true or false
+      "speed": 500,             // Integer: Speed of the transition, in milliseconds
+      "timeout": 4000,          // Integer: Time between slide transitions, in milliseconds
+      "pager": false,           // Boolean: Show pager, true or false
+      "nav": false,             // Boolean: Show navigation, true or false
+      "random": false,          // Boolean: Randomize the order of the slides, true or false
+      "pause": false,           // Boolean: Pause on hover, true or false
+      "pauseControls": true,    // Boolean: Pause when hovering controls, true or false
+      "prevText": "Previous",   // String: Text for the "previous" button
+      "nextText": "Next",       // String: Text for the "next" button
+      "maxwidth": "",           // Integer: Max-width of the slideshow, in pixels
+      "navContainer": "",       // Selector: Where auto generated controls should be appended to, default is after the <ul>
+      "manualControls": "",     // Selector: Declare custom pager navigation
+      "namespace": "rslides",   // String: change the default namespace used
+      "before": $.noop,         // Function: Before callback
+      "after": $.noop           // Function: After callback
+    }, options);
+
+    return this.each(function () {
+
+      // Index for namespacing
+      i++;
+
+      var $this = $(this),
+
+        // Local variables
+        vendor,
+        selectTab,
+        startCycle,
+        restartCycle,
+        rotate,
+        $tabs,
+
+        // Helpers
+        index = 0,
+        $slide = $this.children(),
+        length = $slide.size(),
+        fadeTime = parseFloat(settings.speed),
+        waitTime = parseFloat(settings.timeout),
+        maxw = parseFloat(settings.maxwidth),
+
+        // Namespacing
+        namespace = settings.namespace,
+        namespaceIdx = namespace + i,
+
+        // Classes
+        navClass = namespace + "_nav " + namespaceIdx + "_nav",
+        activeClass = namespace + "_here",
+        visibleClass = namespaceIdx + "_on",
+        slideClassPrefix = namespaceIdx + "_s",
+
+        // Pager
+        $pager = $("<ul class='" + namespace + "_tabs " + namespaceIdx + "_tabs' />"),
+
+        // Styles for visible and hidden slides
+        visible = {"float": "left", "position": "relative", "opacity": 1, "zIndex": 2},
+        hidden = {"float": "none", "position": "absolute", "opacity": 0, "zIndex": 1},
+
+        // Detect transition support
+        supportsTransitions = (function () {
+          var docBody = document.body || document.documentElement;
+          var styles = docBody.style;
+          var prop = "transition";
+          if (typeof styles[prop] === "string") {
+            return true;
+          }
+          // Tests for vendor specific prop
+          vendor = ["Moz", "Webkit", "Khtml", "O", "ms"];
+          prop = prop.charAt(0).toUpperCase() + prop.substr(1);
+          var i;
+          for (i = 0; i < vendor.length; i++) {
+            if (typeof styles[vendor[i] + prop] === "string") {
+              return true;
+            }
+          }
+          return false;
+        })(),
+
+        // Fading animation
+        slideTo = function (idx) {
+          settings.before(idx);
+          // If CSS3 transitions are supported
+          if (supportsTransitions) {
+            $slide
+              .removeClass(visibleClass)
+              .css(hidden)
+              .eq(idx)
+              .addClass(visibleClass)
+              .css(visible);
+            index = idx;
+            setTimeout(function () {
+              settings.after(idx);
+            }, fadeTime);
+          // If not, use jQuery fallback
+          } else {
+            $slide
+              .stop()
+              .fadeOut(fadeTime, function () {
+                $(this)
+                  .removeClass(visibleClass)
+                  .css(hidden)
+                  .css("opacity", 1);
+              })
+              .eq(idx)
+              .fadeIn(fadeTime, function () {
+                $(this)
+                  .addClass(visibleClass)
+                  .css(visible);
+                settings.after(idx);
+                index = idx;
+              });
+          }
+        };
+
+      // Random order
+      if (settings.random) {
+        $slide.sort(function () {
+          return (Math.round(Math.random()) - 0.5);
+        });
+        $this
+          .empty()
+          .append($slide);
+      }
+
+      // Add ID's to each slide
+      $slide.each(function (i) {
+        this.id = slideClassPrefix + i;
+      });
+
+      // Add max-width and classes
+      $this.addClass(namespace + " " + namespaceIdx);
+      if (options && options.maxwidth) {
+        $this.css("max-width", maxw);
+      }
+
+      // Hide all slides, then show first one
+      $slide
+        .hide()
+        .css(hidden)
+        .eq(0)
+        .addClass(visibleClass)
+        .css(visible)
+        .show();
+
+      // CSS transitions
+      if (supportsTransitions) {
+        $slide
+          .show()
+          .css({
+            // -ms prefix isn't needed as IE10 uses prefix free version
+            "-webkit-transition": "opacity " + fadeTime + "ms ease-in-out",
+            "-moz-transition": "opacity " + fadeTime + "ms ease-in-out",
+            "-o-transition": "opacity " + fadeTime + "ms ease-in-out",
+            "transition": "opacity " + fadeTime + "ms ease-in-out"
+          });
+      }
+
+      // Only run if there's more than one slide
+      if ($slide.size() > 1) {
+
+        // Make sure the timeout is at least 100ms longer than the fade
+        if (waitTime < fadeTime + 100) {
+          return;
+        }
+
+        // Pager
+        if (settings.pager && !settings.manualControls) {
+          var tabMarkup = [];
+          $slide.each(function (i) {
+            var n = i + 1;
+            tabMarkup +=
+              "<li>" +
+              "<a href='#' class='" + slideClassPrefix + n + "'>" + n + "</a>" +
+              "</li>";
+          });
+          $pager.append(tabMarkup);
+
+          // Inject pager
+          if (options.navContainer) {
+            $(settings.navContainer).append($pager);
+          } else {
+            $this.after($pager);
+          }
+        }
+
+        // Manual pager controls
+        if (settings.manualControls) {
+          $pager = $(settings.manualControls);
+          $pager.addClass(namespace + "_tabs " + namespaceIdx + "_tabs");
+        }
+
+        // Add pager slide class prefixes
+        if (settings.pager || settings.manualControls) {
+          $pager.find('li').each(function (i) {
+            $(this).addClass(slideClassPrefix + (i + 1));
+          });
+        }
+
+        // If we have a pager, we need to set up the selectTab function
+        if (settings.pager || settings.manualControls) {
+          $tabs = $pager.find('a');
+
+          // Select pager item
+          selectTab = function (idx) {
+            $tabs
+              .closest("li")
+              .removeClass(activeClass)
+              .eq(idx)
+              .addClass(activeClass);
+          };
+        }
+
+        // Auto cycle
+        if (settings.auto) {
+
+          startCycle = function () {
+            rotate = setInterval(function () {
+
+              // Clear the event queue
+              $slide.stop(true, true);
+
+              var idx = index + 1 < length ? index + 1 : 0;
+
+              // Remove active state and set new if pager is set
+              if (settings.pager || settings.manualControls) {
+                selectTab(idx);
+              }
+
+              slideTo(idx);
+            }, waitTime);
+          };
+
+          // Init cycle
+          startCycle();
+        }
+
+        // Restarting cycle
+        restartCycle = function () {
+          if (settings.auto) {
+            // Stop
+            clearInterval(rotate);
+            // Restart
+            startCycle();
+          }
+        };
+
+        // Pause on hover
+        if (settings.pause) {
+          $this.hover(function () {
+            clearInterval(rotate);
+          }, function () {
+            restartCycle();
+          });
+        }
+
+        // Pager click event handler
+        if (settings.pager || settings.manualControls) {
+          $tabs.bind("click", function (e) {
+            e.preventDefault();
+
+            if (!settings.pauseControls) {
+              restartCycle();
+            }
+
+            // Get index of clicked tab
+            var idx = $tabs.index(this);
+
+            // Break if element is already active or currently animated
+            if (index === idx || $("." + visibleClass).queue('fx').length) {
+              return;
+            }
+
+            // Remove active state from old tab and set new one
+            selectTab(idx);
+
+            // Do the animation
+            slideTo(idx);
+          })
+            .eq(0)
+            .closest("li")
+            .addClass(activeClass);
+
+          // Pause when hovering pager
+          if (settings.pauseControls) {
+            $tabs.hover(function () {
+              clearInterval(rotate);
+            }, function () {
+              restartCycle();
+            });
+          }
+        }
+
+        // Navigation
+        if (settings.nav) {
+          var navMarkup =
+            "<a href='#' class='" + navClass + " prev'>" + settings.prevText + "</a>" +
+            "<a href='#' class='" + navClass + " next'>" + settings.nextText + "</a>";
+
+          // Inject navigation
+          if (options.navContainer) {
+            $(settings.navContainer).append(navMarkup);
+          } else {
+            $this.after(navMarkup);
+          }
+
+          var $trigger = $("." + namespaceIdx + "_nav"),
+            $prev = $trigger.filter(".prev");
+
+          // Click event handler
+          $trigger.bind("click", function (e) {
+            e.preventDefault();
+
+            var $visibleClass = $("." + visibleClass);
+
+            // Prevent clicking if currently animated
+            if ($visibleClass.queue('fx').length) {
+              return;
+            }
+
+            //  Adds active class during slide animation
+            //  $(this)
+            //    .addClass(namespace + "_active")
+            //    .delay(fadeTime)
+            //    .queue(function (next) {
+            //      $(this).removeClass(namespace + "_active");
+            //      next();
+            //  });
+
+            // Determine where to slide
+            var idx = $slide.index($visibleClass),
+              prevIdx = idx - 1,
+              nextIdx = idx + 1 < length ? index + 1 : 0;
+
+            // Go to slide
+            slideTo($(this)[0] === $prev[0] ? prevIdx : nextIdx);
+            if (settings.pager || settings.manualControls) {
+              selectTab($(this)[0] === $prev[0] ? prevIdx : nextIdx);
+            }
+
+            if (!settings.pauseControls) {
+              restartCycle();
+            }
+          });
+
+          // Pause when hovering navigation
+          if (settings.pauseControls) {
+            $trigger.hover(function () {
+              clearInterval(rotate);
+            }, function () {
+              restartCycle();
+            });
+          }
+        }
+
+      }
+
+      // Max-width fallback
+      if (typeof document.body.style.maxWidth === "undefined" && options.maxwidth) {
+        var widthSupport = function () {
+          $this.css("width", "100%");
+          if ($this.width() > maxw) {
+            $this.css("width", maxw);
+          }
+        };
+
+        // Init fallback
+        widthSupport();
+        $(window).bind("resize", function () {
+          widthSupport();
+        });
+      }
+
+    });
+
+  };
+})(jQuery, this, 0);
