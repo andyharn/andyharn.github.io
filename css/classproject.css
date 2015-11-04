@@ -9,6 +9,10 @@
   font-family:'Allerta', sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* header section*/
 
   /*headerstyling*/
@@ -521,6 +525,10 @@ height:20em;
   font-weight: bolder;
   font-size:2.5em;
   padding:0 0 .5em .5em;
+}
+
+#contactsection h3 {
+
 }
 
 .contactsectiongrid {
