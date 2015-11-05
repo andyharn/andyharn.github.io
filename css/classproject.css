@@ -138,7 +138,6 @@ header {
 }
 
 .mainpic1 {
-  float:left;
   width:100%;
 }
 
@@ -147,7 +146,6 @@ header {
 #welcomesection {
   font-family:'Allerta', sans-serif;
   width:100%;
-  overflow:hidden;
   box-sizing: border-box;
 }
 
@@ -669,6 +667,7 @@ header {
 
 .mainpic1 {
   margin-top:6em;
+  float:none;
   }
 
 [class*="welcomecol-"] {
@@ -676,6 +675,14 @@ header {
   width:100%;
   margin: 0 auto;
   }
+
+  .welcomecol-1-4 p {
+    padding-top:1em;
+  }
+
+.welcomemodule {
+  padding-top:0;
+}
 
 [class*="aboutcol-"] {
   float:none;
