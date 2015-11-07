@@ -269,6 +269,12 @@ header {
   width:100%;
   overflow:hidden;
   box-sizing: border-box;
+
+}
+
+#menusection p {
+  text-align: center;
+  padding:1em;
 }
 
 .menugrid {
@@ -282,6 +288,7 @@ header {
 #menusection h2 {
   font-weight: bolder;
   font-size:2.5em;
+
 }
 
 #menusection h3 {
@@ -308,7 +315,7 @@ header {
   background-image: url(../assets/background1.png);
   margin:1em auto 1em auto;
   padding:1em 0em 1em 1em;
-  width:80%;
+  width:90%;
 }
 
 .humanmenugrid::after {
@@ -331,8 +338,6 @@ header {
 .humanmodule img {
   display:block;
   margin:auto;
-  width:8em;
-  height:8em;
   border-radius: 4em;
 }
 
@@ -346,7 +351,7 @@ header {
   background-image: url(../assets/background1.png);
   margin:0em auto 0em auto;
   padding:1em 0em 1em 1em;
-  width:80%;
+  width:90%;
 }
 
 .catmenugrid::after {
@@ -369,8 +374,6 @@ header {
 .catcol-1-4 img {
   display:block;
   margin:auto;
-  width:8em;
-  height:8em;
   border-radius: 4em;
 }
 
@@ -727,6 +730,23 @@ input[type="submit"] {
   }
 }
 
+@media screen and (max-width: 800px) {
+
+.catcol-1-4 {
+  float:left;
+  width:50%;
+  padding-right:1em;
+  text-align: center;
+  }
+
+  .humancol-1-4 {
+    float:left;
+    width:50%;
+    padding-right:1em;
+    text-align: center;
+    }
+}
+
 /* Small devices (smaller than 550px) */
 @media screen and (max-width: 550px) {
 
@@ -738,20 +758,23 @@ input[type="submit"] {
   padding:1em;
 }
 
-.welcomemodule {
-  padding:0;
-}
-[class*="humancol-"] {
-  float:none;
-  width:100%;
-  margin: 0 auto;
+.menugrid img {
+  width:8em;
+  height:8em;
 }
 
-[class*="catcol-"] {
-  float:none;
-  width:100%;
-  margin: 0 auto;
+@media screen and (max-width: 500px) {
+  [class*="humancol-"] {
+    float:none;
+    width:100%;
+    margin: 0 auto;
   }
+
+  [class*="catcol-"] {
+    float:none;
+    width:100%;
+    margin: 0 auto;
+    }
 }
 
 /* Extra Small devices (smaller than 400px)*/
@@ -759,10 +782,9 @@ input[type="submit"] {
   .mainpic1 {
     margin-top:12em;
   }
-}
-
+)
 /* Large devices (large desktops, 1900x and up) */
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 2000px) {
 body {
   width:98%;
   margin:0 auto;
