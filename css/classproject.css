@@ -457,6 +457,9 @@ header {
   display:none;
 }
 
+.piccontainer img {
+  padding:.5em;
+}
 /*contact section*/
 
 #contactsection {
