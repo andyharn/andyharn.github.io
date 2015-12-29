@@ -787,6 +787,15 @@ input[type="submit"] {
     margin-top:12em;
   }
 )
+
+/* Extra Extra Small devices (smaller than 400px)*/
+
+@media screen and (max-width: 232px) {
+  .mainpic1 {
+    margin-top:13em;
+  }
+)
+
 /* Large devices (large desktops, 1900x and up) */
 @media screen and (min-width: 2000px) {
 body {
