@@ -784,6 +784,13 @@ input[type="submit"] {
 /* Extra Small devices (smaller than 400px)*/
 @media screen and (max-width: 400px) {
   .mainpic1 {
+    margin-top:10em;
+  }
+}
+
+/* Extra Small devices (smaller than 400px)*/
+@media screen and (max-width: 480px) {
+  .mainpic1 {
     margin-top:12em;
   }
 }
