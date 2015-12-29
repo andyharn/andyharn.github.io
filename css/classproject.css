@@ -788,8 +788,8 @@ input[type="submit"] {
   }
 }
 
-/* Extra Small devices (smaller than 400px)*/
-@media screen and (max-width: 480px) {
+/* Extra Small devices (smaller than 380px)*/
+@media screen and (max-width: 380px) {
   .mainpic1 {
     margin-top:12em;
   }
