@@ -788,13 +788,21 @@ input[type="submit"] {
   }
 }
 
-/* Extra Extra Small devices (smaller than 400px)*/
+/* Extra Extra Small devices (smaller than 360px)*/
 
-@media screen and (max-width: 232px) {
+@media screen and (max-width: 360px) {
+  .mainpic1 {
+    margin-top:12.5em;
+  }
+}
+
+/* Extra Extra Small devices (smaller than 362px)*/
+
+@media screen and (max-width: 320px) {
   .mainpic1 {
     margin-top:13em;
   }
-)
+}
 
 /* Large devices (large desktops, 1900x and up) */
 @media screen and (min-width: 2000px) {
